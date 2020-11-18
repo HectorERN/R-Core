@@ -7,7 +7,7 @@ In the following links you can find a compressed files which contains a folder w
 This repository describes the syntax of the parameters to be used and a couple of examples are added to test the functionality.
 
 ## Links
-miniR (2 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/miniR.zip) (updated 2020-11-10)
+miniR (2 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/miniR.zip) (updated 2020-11-18)
 
 miniR File System (465 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/miniR_fs.zip) (updated 2020-11-10)
 
