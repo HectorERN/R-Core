@@ -1,85 +1,119 @@
-# miniR
+# R-CORE
 
-This system is based on the version of the System R Plus (desktop) for its execution through a series of parameters through a console or terminal. 
+This system is based on the version of the System R Plus and RH-Mex for its execution through a series of parameters through a terminal. 
 
 In the following links you can find a compressed files which contains a folder with all the files necessary for its execution. 
 
 This repository describes the syntax of the parameters to be used and a couple of examples are added to test the functionality.
 
 ## Links
-miniR (2 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/miniR.zip) (updated 2020-11-18)
 
-miniR File System (465 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/miniR_fs.zip) (updated 2020-11-10)
+miniR (5 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/miniR.zip) (updated 2021-02-03)
+miniR File System (465 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/miniR_fs.zip) (updated 2021-02-03)
 
-## Sintaxis miniR
+RH-Mex core (510 KB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/RH-Mex_core_linux-x64.zip) (updated 2021-02-03)
+RH-Mex File System (166 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/rh_fs.zip) (updated 2021-02-03)
+
+## Sintaxis R-CORE
 Argument definition
 
 |Field|Available Values|Comments|
 |---|---|---|
-|File System (FS)|"{path}"|File System Path "/home/hiar/SwissRe/miniR/miniR_fs"| 
-|Process|L, LC, LS|L=Load Portfolio, LC=Load and Compute, LS=Load and Accumulate|
+|Configuration File (JSON)|"{file}"|"/home/hiar/SwissRe/r-core/config.json"| 
 |Initial Chunk|numeric|1| 
-|Total Chunks|numeric|4| 
-|Peril|S, SR|S=Earthquake, SR=Earthquake (Regulatory)| 
-|Cut of Date|yyyy-MM-dd|2020-10-27|
-|PortfolioType|1, 2, 3|1=Individual,2=Collective,3=Both|
-|Results Path|"{path}"|"/home/hiar/SwissRe/miniR/Tests"|
-|Portfolio|"{file}"|"/home/hiar/SwissRe/miniR/Portfolios/EQ_Ind.xml"|
-|PortfolioCollective*|"{file}"|"/home/hiar/SwissRe/miniR/Portfolios/EQ_Col.xml"|
+|Total Chunks|numeric|2| 
 |---|---|---|
 
+## Configuration File
 
+Most of the arguments from the previous version were integrated into this json file 
 
-* *The last parameter (Portfolio Collective) is added only in case PortfolioType 3 has been selected.
+```sh
+{
+	"ProcessType":"L",
+	"Perils":"H",
+	"CutOffDate":"2020-10-20",
+	"PortfolioType":3,
+	"Portfolios":["/home/hiar/SwissRe/r-core/Ind_test.xml", "/home/hiar/SwissRe/r-core/Col_test.xml"],
+	"ResultsPath":"/home/hiar/SwissRe/r-core/results",
+	"SystemPath":"/home/hiar/SwissRe/r-core/miniR_fs"
+}
+```
 
+### JSON parameters
 
-PortolioType (1 or 2)
-
-* dotnet "miniR.dll" "[FS]" [Process] [iniChunk] [totChunks] [Peril] [CutOfDate] [PortfolioTyoe] "[ResultsPath]" "[Portfolio]"
-
-PortolioType (3)
-
-* dotnet "miniR.dll" "[FS]" [Process] [iniChunk] [totChunks] [Peril] [CutOfDate] [PortfolioTyoe] "[ResultsPath]" "[Portfolio]" "[PortfolioCollective]"
+|Field|Available Values|Comments|
+|---|---|---|
+|ProcessType|L, LC, LS |L=Load Portfolio, LC=Load and Compute, LS=Load and Accumulate| 
+|Perils|S, SR, H|S=Earthquake, SR=Earthquake (Regulatory), H=Hydro| 
+|Cutoff Date|yyyy-MM-dd|2020-10-30|
+|PortfolioType|1, 2, 3|1=Individual,2=Collective,3=Both (3 - just for miniR)|
+|Portfolios|["{file}"]|When PortfolioType = 3, two file names must be entered; otherwise only one|
+|Results Path|"{path}"|"/home/hiar/SwissRe/rcore/Tests"|
+|SystemPath|"{path}"| System path for miniR or RH-Mex |
+|---|---|---|
 
 
 ## Examples
 
-### Example 1 (Individual)
+### Example (miniR - Individual and Collective) 
 
-PortfolioType = 1
-
+Configuration file
 ```sh
-dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/miniR_fs" L 1 1 S 2020-10-20 1 "/home/hiar/SwissRe/miniR/Tests" "/home/hiar/SwissRe/miniR/Portfolios/EQ_Ind.xml"
-dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/miniR_fs" LC 1 1 S 2020-10-20 1 "/home/hiar/SwissRe/miniR/Tests" "/home/hiar/SwissRe/miniR/Portfolios/EQ_Ind.xml"
-dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/miniR_fs" LS 1 1 S 2020-10-20 1 "/home/hiar/SwissRe/miniR/Tests" "/home/hiar/SwissRe/miniR/Portfolios/EQ_Ind.xml"
+{
+	"ProcessType":"L",
+	"Perils":"S",
+	"CutOffDate":"2020-12-30",
+	"PortfolioType":3,
+	"Portfolios":["/home/hiar/SwissRe/r-core/Ind_test.xml", "/home/hiar/SwissRe/r-core/Col_test.xml"],
+	"ResultsPath":"/home/hiar/SwissRe/r-core/results",
+	"SystemPath":"/home/hiar/SwissRe/r-core/miniR_fs"
+}
 ```
 
-### Example 2 (Collective)
+### Example (RH-Mex - Individual) 
 
-PortfolioType = 2
+Independent portfolio assessment for hydro
+
+Configuration file
+```sh
+{
+	"ProcessType":"L",
+	"Perils":"H",
+	"CutOffDate":"2020-12-30",
+	"PortfolioType":1,
+	"Portfolios":["/home/hiar/SwissRe/r-core/Ind_rh_test.xml"],
+	"ResultsPath":"/home/hiar/SwissRe/r-core/results",
+	"SystemPath":"/home/hiar/SwissRe/r-core/rh_fs"
+}
+
+miniR
 
 ```sh
-dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/miniR_fs" L 1 1 S 2020-10-20 2 "/home/hiar/SwissRe/miniR/Tests" "/home/hiar/SwissRe/miniR/Portfolios/EQ_Col.xml"
-dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/miniR_fs" LC 1 1 S 2020-10-20 2 "/home/hiar/SwissRe/miniR/Tests" "/home/hiar/SwissRe/miniR/Portfolios/EQ_Col.xml"
-dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/miniR_fs" LS 1 1 S 2020-10-20 2 "/home/hiar/SwissRe/miniR/Tests" "/home/hiar/SwissRe/miniR/Portfolios/EQ_Col.xml"
+#In each execution the process type must be changed in the configuration file
+#ProcessType = L
+dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/cfg_t1.json" 1 1 
+
+#ProcessType = LC
+dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/cfg_t1.json" 1 2
+dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/cfg_t1.json" 2 2
+
+#ProcessType = LS
+dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/cfg_t1.json" 1 2
 ```
 
-### Example 3 (Individual and Collective)
-
-PortfolioType = 3 (tha last parameter [PortfolioCollective] is included)
+RH-Mex
 
 ```sh
-dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/miniR_fs" L 1 1 S 2020-10-20 3 "/home/hiar/SwissRe/miniR/Tests" "/home/hiar/SwissRe/miniR/Portfolios/EQ_Ind.xml" "/home/hiar/SwissRe/miniR/Portfolios/EQ_Col.xml"
-dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/miniR_fs" LC 1 1 S 2020-10-20 3 "/home/hiar/SwissRe/miniR/Tests" "/home/hiar/SwissRe/miniR/Portfolios/EQ_Ind.xml" "/home/hiar/SwissRe/miniR/Portfolios/EQ_Col.xml"
-dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/miniR_fs" LS 1 1 S 2020-10-20 3 "/home/hiar/SwissRe/miniR/Tests" "/home/hiar/SwissRe/miniR/Portfolios/EQ_Ind.xml" "/home/hiar/SwissRe/miniR/Portfolios/EQ_Col.xml"
-```
+#In each execution the process type must be changed in the configuration file
 
-### Example 3 (Regulatory Assestment)
+#ProcessType = L
+dotnet "RH-Mex_core.dll" "/home/hiar/SwissRe/miniR/cfg_t1.json" 1 1 
 
-Peril = SR
+#ProcessType = LC
+dotnet "RH-Mex_core.dll" "/home/hiar/SwissRe/miniR/cfg_t1.json" 1 2 
+dotnet "RH-Mex_core.dll" "/home/hiar/SwissRe/miniR/cfg_t1.json" 2 2 
 
-```sh
-dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/miniR_fs" L 1 1 SR 2020-10-20 1 "/home/hiar/SwissRe/miniR/Tests" "/home/hiar/SwissRe/miniR/Portfolios/EQ_Ind.xml"
-dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/miniR_fs" LC 1 1 SR 2020-10-20 1 "/home/hiar/SwissRe/miniR/Tests" "/home/hiar/SwissRe/miniR/Portfolios/EQ_Ind.xml"
-dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/miniR_fs" LS 1 1 SR 2020-10-20 1 "/home/hiar/SwissRe/miniR/Tests" "/home/hiar/SwissRe/miniR/Portfolios/EQ_Ind.xml"
+#ProcessType = LS
+dotnet "RH-Mex_core.dll" "/home/hiar/SwissRe/miniR/cfg_t1.json" 1 2 
 ```
