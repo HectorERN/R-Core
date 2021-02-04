@@ -8,11 +8,14 @@ This repository describes the syntax of the parameters to be used and a couple o
 
 ## Links
 
-miniR (5 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/miniR.zip) (updated 2021-02-03)
-miniR File System (465 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/miniR_fs.zip) (updated 2021-02-03)
+* miniR (5 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/miniR.zip) (updated 2021-02-03)
 
-RH-Mex core (510 KB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/RH-Mex_core_linux-x64.zip) (updated 2021-02-03)
-RH-Mex File System (166 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/rh_fs.zip) (updated 2021-02-03)
+* miniR File System (465 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/miniR_fs.zip) (updated 2021-02-03)
+
+
+* RH-Mex core (510 KB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/RH-Mex_core_linux-x64.zip) (updated 2021-02-03)
+
+* RH-Mex File System (166 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/rh_fs.zip) (updated 2021-02-03)
 
 ## Sintaxis R-CORE
 Argument definition

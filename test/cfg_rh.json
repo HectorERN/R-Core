@@ -1,0 +1,11 @@
+{
+  "ProcessType": "L",
+  "Perils": "H",
+  "CutOffDate": "2021-01-21",
+  "PortfolioType": 1,
+  "Portfolios": [
+    "D:\\Development\\ERN\\rh-mex\\r-core\\Portfolios\\RH_test.xml"
+  ],
+  "ResultsPath": "D:\\Development\\ERN\\rh-mex\\r-core\\Resultados",
+  "SystemPath": "D:\\Development\\ERN\\rh-mex\\r-core\\rh_fs"
+}

@@ -1,0 +1,12 @@
+{
+  "ProcessType": "L",
+  "Perils": "S",
+  "CutOffDate": "2020-12-30",
+  "PortfolioType": 3,
+  "Portfolios": [
+    "D:\\Development\\ERN\\miniR\\Portfolios\\EQ_Ind.xml",
+    "D:\\Development\\ERN\\miniR\\Portfolios\\EQ_Col.xml"
+  ],
+  "ResultsPath": "D:\\Development\\ERN\\miniR\\results",
+  "SystemPath": "D:\\Development\\ERN\\miniR_fs"
+  }
