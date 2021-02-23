@@ -8,9 +8,9 @@ This repository describes the syntax of the parameters to be used and a couple o
 
 ## Links
 
-* miniR (5 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/miniR.zip) (updated 2021-02-03)
+* miniR (2 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/miniR_v1.0.0.3_linux_x64.zip) (updated 2021-02-22)
 
-* miniR File System (465 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/miniR_fs.zip) (updated 2021-02-03)
+* miniR File System (706 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/miniR_fs.zip) (updated 2021-02-03)
 
 
 * RH-Mex core (510 KB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/RH-Mex_core_linux-x64.zip) (updated 2021-02-03)
@@ -47,7 +47,7 @@ Most of the arguments from the previous version were integrated into this json f
 
 |Field|Available Values|Comments|
 |---|---|---|
-|ProcessType|L, LC, LS |L=Load Portfolio, LC=Load and Compute, LS=Load and Accumulate| 
+|ProcessType|L, LM, LC, LS |L=Load Portfolio, *LM=Load Portfolio bin to Memory, LC=Load and Compute, LS=Load and Accumulate| 
 |Perils|S, SR, H|S=Earthquake, SR=Earthquake (Regulatory), H=Hydro| 
 |Cutoff Date|yyyy-MM-dd|2020-10-30|
 |PortfolioType|1, 2, 3|1=Individual,2=Collective,3=Both (3 - just for miniR)|
@@ -55,6 +55,14 @@ Most of the arguments from the previous version were integrated into this json f
 |Results Path|"{path}"|"/home/hiar/SwissRe/rcore/Tests"|
 |SystemPath|"{path}"| System path for miniR or RH-Mex |
 |---|---|---|
+
+### LM Process 
+
+* Improve portfolio loading across all processes.
+* The LM process must be alive as long as the N LC and LS processes are running.
+* When the LM process finishes loading the portfolio to memory, it generates a PortfolioID.id file with a unique identifier, in case the process fails, a text file with the corresponding error is generated.
+* Once the LC and LS processes have finished, the process that executed the LM command must be killed.
+* Only available for R Plus (miniR) 
 
 
 ## Examples
@@ -74,20 +82,20 @@ Configuration file
 }
 ```
 
-### Example (RH-Mex - Individual) 
+### Example (miniR - Individual) 
 
-Independent portfolio assessment for hydro
+Independent portfolio assessment for earthquake
 
 Configuration file
 ```sh
 {
 	"ProcessType":"L",
-	"Perils":"H",
+	"Perils":"S",
 	"CutOffDate":"2020-12-30",
 	"PortfolioType":1,
-	"Portfolios":["/home/hiar/SwissRe/r-core/Ind_rh_test.xml"],
+	"Portfolios":["/home/hiar/SwissRe/r-core/EQ_Ind.xml"],
 	"ResultsPath":"/home/hiar/SwissRe/r-core/results",
-	"SystemPath":"/home/hiar/SwissRe/r-core/rh_fs"
+	"SystemPath":"/home/hiar/SwissRe/r-core/miniR_fs"
 }
 
 miniR
@@ -95,14 +103,21 @@ miniR
 ```sh
 #In each execution the process type must be changed in the configuration file
 #ProcessType = L
-dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/cfg_t1.json" 1 1 
+dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/cfg_eq.json" 1 1 
+
+#ProcessType = LM this process nust be alive
+dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/cfg_eq.json" 1 1 
 
 #ProcessType = LC
-dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/cfg_t1.json" 1 2
-dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/cfg_t1.json" 2 2
+dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/cfg_eq.json" 1 2
+dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/cfg_eq.json" 2 2
 
 #ProcessType = LS
-dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/cfg_t1.json" 1 2
+dotnet "miniR.dll" "/home/hiar/SwissRe/miniR/cfg_eq.json" 1 2
+
+# WE MUST KILL "LM" PROCESS
+
+
 ```
 
 RH-Mex
