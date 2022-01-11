@@ -1,11 +1,12 @@
 {
-  "ProcessType": "L",
   "Perils": "H",
-  "CutOffDate": "2021-01-21",
-  "PortfolioType": 1,
+  "CutOffDate": "2020-12-30",  
   "Portfolios": [
-    "D:\\Development\\ERN\\rh-mex\\r-core\\Portfolios\\RH_test.xml"
+    {
+      "FileName": "/home/hiar/swissRe/Examples/RH_Col.xml",
+      "Type": 2
+    }
   ],
-  "ResultsPath": "D:\\Development\\ERN\\rh-mex\\r-core\\Resultados",
-  "SystemPath": "D:\\Development\\ERN\\rh-mex\\r-core\\rh_fs"
-}
+  "ResultsPath": "/home/hiar/swissRe/Examples/resultsRH",
+  "SystemPath": "/home/hiar/swissRe/RH-Core"
+  }

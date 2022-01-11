@@ -1,12 +1,12 @@
 {
-  "ProcessType": "L",
   "Perils": "S",
-  "CutOffDate": "2020-12-30",
-  "PortfolioType": 3,
+  "CutOffDate": "2020-12-30",  
   "Portfolios": [
-    "D:\\Development\\ERN\\miniR\\Portfolios\\EQ_Ind.xml",
-    "D:\\Development\\ERN\\miniR\\Portfolios\\EQ_Col.xml"
+    {
+      "FileName": "/home/hiar/swissRe/Examples/EQ_Ind.xml",
+      "Type": 1
+    }
   ],
-  "ResultsPath": "D:\\Development\\ERN\\miniR\\results",
-  "SystemPath": "D:\\Development\\ERN\\miniR_fs"
+  "ResultsPath": "/home/hiar/swissRe/Examples/results",
+  "SystemPath": "/home/hiar/swissRe/R-Core"
   }
