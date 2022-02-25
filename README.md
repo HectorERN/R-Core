@@ -8,9 +8,9 @@ This repository describes the syntax of the parameters to be used and a couple o
 
 ## Links
 
-* R-Core (4 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_v1.0.0.14_linux-x64.zip) (updated 2022-01-11)
+* R-Core (5 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_v1.0.0.15_linux-x64.zip) (updated 2022-01-11)
 
-* R-Core File System (534 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_fs_v1.0.0.14.zip) (updated 2022-01-11)
+* R-Core File System (534 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_fs_v1.0.0.15.zip) (updated 2022-01-11)
 
 
 * RH-Mex Core (2 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/RH-Mex_Core_v1.0.0.4_linux-x64.zip) (updated 2022-01-11)
@@ -38,16 +38,20 @@ Most of the arguments from the previous version were integrated into this json f
 	"CutOffDate":"2020-10-20",
 	"Portfolios": [
 		{
-		"FileName": "/home/hiar/swissRe/RH-Mex_Core/EQ_Ind.xml",
+		"FileName": "/home/hiar/SwissRe/R_Core/EQ_Ind.csv",
 		"Type": 1
 		},
 		{
-		"FileName": "/home/hiar/swissRe/RH-Mex_Core/EQ_Col.xml",
+		"FileName": "/home/hiar/SwissRe/R_Core/policies.csv",
+		"Type": 2
+		},
+		{
+		"FileName": "/home/hiar/SwissRe/R_Core/buildings.csv",
 		"Type": 2
 		}
   	],
-	"ResultsPath":"/home/hiar/SwissRe/r-core/results",
-	"SystemPath":"/home/hiar/SwissRe/r-core/R-Core"
+	"ResultsPath":"/home/hiar/SwissRe/R_Core/results",
+	"SystemPath":"/home/hiar/SwissRe/R_Core/R-Core"
 }
 ```
 
@@ -65,7 +69,11 @@ Most of the arguments from the previous version were integrated into this json f
 
 ## Examples
 
-### Example (R-Core - Individual and Collective) 
+### Example (R-Core - Collective Portfolio) 
+
+
+In the case of collective portfolios, two files are required, one with the information of the policies and the other with the information of the buildings and both must be integrated with Type=2, internally the system will determine through its column scheme which corresponds to each table as previously handled in XML.
+
 
 Configuration file
 ```sh
@@ -74,16 +82,16 @@ Configuration file
 	"CutOffDate":"2020-10-20",
 	"Portfolios": [
 		{
-		"FileName": "/home/hiar/swissRe/RH-Mex_Core/EQ_Ind.xml",
-		"Type": 1
+		"FileName": "/home/hiar/SwissRe/R_Core/Ej_policies.csv",
+		"Type": 2
 		},
 		{
-		"FileName": "/home/hiar/swissRe/RH-Mex_Core/EQ_Col.xml",
+		"FileName": "/home/hiar/SwissRe/R_Core/EJ_blds.csv",
 		"Type": 2
 		}
   	],
-	"ResultsPath":"/home/hiar/SwissRe/r-core/results",
-	"SystemPath":"/home/hiar/SwissRe/r-core/R-Core"
+	"ResultsPath":"/home/hiar/SwissRe/R_Core/results",
+	"SystemPath":"/home/hiar/SwissRe/R_Core/R-Core"
 }
 ```
 
@@ -98,12 +106,12 @@ Configuration file
 	"CutOffDate":"2020-10-20",
 	"Portfolios": [
 		{
-		"FileName": "/home/hiar/swissRe/RH-Mex_Core/EQ_Ind.xml",
+		"FileName": "/home/hiar/SwissRe/R_Core/buildings.csv",
 		"Type": 1
 		}
   	],
-	"ResultsPath":"/home/hiar/SwissRe/r-core/results",
-	"SystemPath":"/home/hiar/SwissRe/r-core/R-Core"
+	"ResultsPath":"/home/hiar/SwissRe/R_Core/results",
+	"SystemPath":"/home/hiar/SwissRe/R_Core/R-Core"
 }
 ```
 ### Execution
