@@ -8,14 +8,14 @@ This repository describes the syntax of the parameters to be used and a couple o
 
 ## Links
 
-* R-Core (5 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_v1.0.0.15_linux-x64.zip) (updated 2022-01-11)
+* R-Core v1.0.0.15 (5 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_v1.0.0.15_linux-x64.zip) (updated 2022-02-25)
 
-* R-Core File System (534 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_fs_v1.0.0.15.zip) (updated 2022-01-11)
+* R-Core File System v1.0.0.15 (534 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_fs_v1.0.0.15.zip) (updated 2022-02-25)
 
 
-* RH-Mex Core (2 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/RH-Mex_Core_v1.0.0.4_linux-x64.zip) (updated 2022-01-11)
+* RH-Mex Core v1.0.0.5 (2 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/RH-Mex_Core_v1.0.0.5_linux-x64.zip) (updated 2022-02-28)
 
-* RH-Mex Core File System (166 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/RH-Mex_Core_v1.0.0.4_fs.zip) (updated 2022-01-11)
+* RH-Mex Core File System v1.0.0.5 (166 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/RH-Mex_Core_v1.0.0.5_fs.zip) (updated 2022-02-28)
 
 ## Sintaxis R-CORE
 Argument definition
