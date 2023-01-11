@@ -3,10 +3,29 @@
   "CutOffDate": "2020-12-30",  
   "Portfolios": [
     {
-      "FileName": "/home/hiar/swissRe/Examples/EQ_Ind.xml",
-      "Type": 1
+      "FileName": "/home/hiar/swissRe/Examples/account.csv",
+      "Type": 7
+    },
+    {
+      "FileName": "/home/hiar/swissRe/Examples/location.csv",
+      "Type": 8
+    },
+    {
+      "FileName": "/home/hiar/swissRe/Examples/reinsInfo.csv",
+      "Type": 9
+    },
+    {
+      "FileName": "/home/hiar/swissRe/Examples/reinsScope.csv",
+      "Type": 10
     }
   ],
   "ResultsPath": "/home/hiar/swissRe/Examples/results",
-  "SystemPath": "/home/hiar/swissRe/R-Core"
+  "SystemPath": "/home/hiar/swissRe/R-Core",
+  "Scenario": "/home/hiar/swissRe/R-Core/archivo.zip",
+  "Scenario2": [
+    {
+      "peril": "QEQ",
+      "id": 123
+    }
+  ]
   }
