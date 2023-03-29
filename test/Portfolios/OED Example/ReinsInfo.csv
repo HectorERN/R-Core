@@ -1,9 +1,0 @@
-ReinsNumber,ReinsName,ReinsLayerNumber,ReinsPeril,ReinsInceptionDate,ReinsExpiryDate,CededPercent,RiskLimit,RiskAttachment,OccLimit,OccAttachment,OccFranchiseDed,OccReverseFranchise,AggLimit,AggAttachment,AggPeriod,PlacedPercent,ReinsCurrency,InuringPriority,ReinsType,AttachmentBasis,Reinstatement,ReinstatementCharge,ReinsPremium,DeemedPercentPlaced,ReinsFXrate,TreatyShare,UseReinsDates,RiskLevel,OEDVersion
-1,Test_10,1,QEQ,,,0.8,250000,50000,,,,,,,,0.2,MXN,1,QS,,,,,,,,,LOC,2.0.0
-2,Test_10,1,QEQ,,,0.8,50000,100000,,,,,,,,0.2,MXN,2,SS,,,,,,,,,LOC,2.0.0
-2,Test_10,2,QEQ,,,0.8,100000,150000,,,,,,,,0.2,MXN,2,SS,,,,,,,,,LOC,2.0.0
-3,Test_10,3,QEQ,,,0.8,150000,250000,,,,,,,,0.2,MXN,2,FAC,,,,,,,,,LOC,2.0.0
-4,Test_10,1,QEQ,,,0.8,10000,0,,,,,,,,0.2,MXN,3,CXL,,,,,,,,,ACC,2.0.0
-4,Test_10,2,QEQ,,,0.8,20000,10000,,,,,,,,0.2,MXN,3,CXL,,,,,,,,,ACC,2.0.0
-4,Test_10,3,QEQ,,,0.8,50000,100000,,,,,,,,0.2,MXN,3,CXL,,,,,,,,,ACC,2.0.0
-4,Test_10,4,QEQ,,,0.8,200000,250000,,,,,,,,0.2,MXN,3,CXL,,,,,,,,,ACC,2.0.0

@@ -76,8 +76,6 @@ This file allows us to define the input files, as well as the result path, the l
 |---|---|
 
 ---
-## Definición de perspectivas y resultados
----
 
 # Examples
 
@@ -252,13 +250,15 @@ dotnet "R_Core.dll" "/home/hiar/SwissRe/Examples/cfg_eq.json" "esc" 1 1
 
 In the following links you can find the latest stable version of the system for downloading
 
-* R-Core (MX - EQ & HYDRO) v2.0.0.0 (8 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_v2.0.0.0_linux-x64.zip) (updated 2023-01-11)
+* R-Core (MX, COL - EQ & HYDRO) v2.0.0.1 (8 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_v2.0.0.1_linux-x64.zip) (updated 2023-03-28)
   
-* R-Core (ASLAC - EQ) v2.0.0.0 (8 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_v2.0.0.0_ASLAC_linux-x64.zip) (updated 2023-01-11)
+* R-Core (ASLAC - EQ) v2.0.0.1 (8 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_v2.0.0.1_ASLAC_linux-x64.zip) (updated 2023-03-28)
 
-* R-Core File System v2.0.0.0 (745 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_fs_v2.0.0.0.zip) (updated 2023-01-11)
+* R-Core File System v2.0.0.1 (745 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_fs_v2.0.0.1.zip) (updated 2023-03-28)
+  
+* R-Core ASLAC File System v2.0.0.1 (745 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_fs_v2.0.0.1_ASLAC.zip) (updated 2023-03-28)
 
 
-* RH-Mex Core v2.0.0.0 (2 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/RH-Mex_Core_v2.0.0.0_linux-x64.zip) (updated 2023-01-11)
+* RH-Mex Core v2.0.0.0 (2 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/RH-Mex_Core_v2.0.0.0_linux-x64.zip) (updated 2023-03-28)
 
-* RH-Mex Core File System v2.0.0.0 (166 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/RH-Mex_Core_v2.0.0.0_fs.zip) (updated 2023-01-11)
+* RH-Mex Core File System v2.0.0.0 (166 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/RH-Mex_Core_fs_v2.0.0.0.zip) (updated 2023-03-28)

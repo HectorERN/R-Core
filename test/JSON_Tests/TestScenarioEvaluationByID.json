@@ -1,0 +1,30 @@
+{
+  "Perils": "S",
+  "CutOffDate": "2020-12-30",  
+  "Portfolios": [
+    {
+      "FileName": "/home/hiar/swissRe/Examples/account.csv",
+      "Type": 7
+    },
+    {
+      "FileName": "/home/hiar/swissRe/Examples/location.csv",
+      "Type": 8
+    },
+    {
+      "FileName": "/home/hiar/swissRe/Examples/reinsInfo.csv",
+      "Type": 9
+    },
+    {
+      "FileName": "/home/hiar/swissRe/Examples/reinsScope.csv",
+      "Type": 10
+    }
+  ],
+  "Tr": "0,1,2,5,10,15,20,25,30,35,40,45,50,75,100,150,200,250,500,1000,1500,2500,5000,10000,25000,50000",
+  "ResultsPath": "/home/hiar/swissRe/Examples/results",
+  "SystemPath": "/home/hiar/swissRe/R-Core",
+  "ScenarioInfo":
+	{
+		"IdScenario" : 10602,
+		"Peril": "QEQ"
+	}
+}

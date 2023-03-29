@@ -1,2 +1,0 @@
-PortNumber,PortName,AccNumber,AccName,AccCurrency,AccPeril,PolNumber,PolPerilsCovered,LayerNumber,LayerParticipation,LayerLimit,LayerAttachment,PolPeril,OEDVersion
-1,,Test_10,,MXN,,Layer1,QEQ,1,0,10000000,0,,2.0.0

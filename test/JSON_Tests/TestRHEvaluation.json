@@ -1,0 +1,17 @@
+{
+  "Perils": "H",
+  "CutOffDate": "2022-02-28",  
+  "Portfolios": [
+    {
+      "FileName": "/home/hiar/swissRe/Examples/Ej_policies.csv",
+      "Type": 2
+    },
+    {
+      "FileName": "/home/hiar/swissRe/Examples/Ej_blds.csv",
+      "Type": 2
+    }
+  ],
+  "Tr": "0,1,2,5,10,15,20,25,30,35,40,45,50,75,100,150,200,250,500,1000,1500,2500,5000,10000,25000,50000",
+  "ResultsPath": "/home/hiar/swissRe/Examples/resultsRH",
+  "SystemPath": "/home/hiar/swissRe/RH-Core"
+  }
