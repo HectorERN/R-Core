@@ -1,11 +1,11 @@
 # Portfolios
 
 
-The system currently has the capability to support a variety of formats, both Access databases (*.mdb or *.accdb) as well as CSV files with the OED standard.
+The system currently has the capability to support a variety of formats this installation supports a CSV files with the OED standard.
 
 # OED
 
-Para ver una descripción detallada acerca del formato de los archivos OED, favor de revisar la documentación oficial a través de los siguientes enlaces:
+For a detailed description of the OED file format, please refer to the official documentation via the following links:
 
 |Description|Link|
 |---|---|
@@ -91,6 +91,20 @@ Since ERN implements secondary modifiers currently not supported in the OED stan
 |Is overweight|1|
 |Not overweight|0|
 
+* FlexiLocBeachFront
+  
+|Description|Value|
+|---|---|
+|Is on beach front|1|
+|Not in beach front |0|
+
+
+* FlexiLocSoftStory
+  
+|Description|Value|
+|---|---|
+|Has Soft Story|1|
+|Not Soft Story|0|
 
 <br>
 
