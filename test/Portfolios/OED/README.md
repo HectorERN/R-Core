@@ -195,3 +195,20 @@ Scope
 |SSigma|Sum of the standard deviations of all the locations evaluated without considering correlation.|
 |SVar|Sum of the variances of all the locations without considering correlation.|
 |Scenario Description|This column is informative and contains the name of the event and a brief description.|
+
+---
+## Results by Scenario Evaluation
+
+When evaluating a specific scenario, the system will generate two types of results, Premiums and Losses per location and per peril.
+  * Result by Peril
+  
+|Peril|GrossLoss|NetLoss(Pre-CAT)|GroundUp|Ceded|
+|---|---|---|---|---|
+|QEQ|126891.50|63445.75|139580.65|63445.75|
+
+  * Result by Location
+
+|LocID|QEQ_Gross|QEQ_Net(Pre-CAT)|QEQ_GroundUp|QEQ_Ceeded|
+|---|---|---|---|---|
+|1|144296.36|0|144296.36|144296.36|
+|2|168920.39|0|168920.39|168920.39|

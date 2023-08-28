@@ -141,6 +141,7 @@ In the case of scenario evaluation, we must enter the information corresponding 
 
 ```
 {
+	"Perils":"S",
 	"Portfolios": [
 		{
 		"FileName": "/home/hiar/SwissRe/R_Core/acc.csv",
@@ -165,6 +166,7 @@ If you wish to evaluate an event through the catalog provided by ERN, you must i
 * Computation by URL
 ```
 {
+	"Perils":"S",
 	"Portfolios": [
 		{
 		"FileName": "/home/hiar/SwissRe/R_Core/acc.csv",
@@ -188,6 +190,7 @@ If you wish to evaluate an event through the catalog provided by ERN, you must i
 * Computation by File (in zip format - provided by ERN)
 ```
 {
+	"Perils":"S",
 	"Portfolios": [
 		{
 		"FileName": "/home/hiar/SwissRe/R_Core/acc.csv",
@@ -203,7 +206,7 @@ If you wish to evaluate an event through the catalog provided by ERN, you must i
 	"ScenarioInfo":
 	{		
 		"Peril": "QEQ",
-		"URL": "/home/hiar/SwissRe/R_Core/SISMO_eq20221211.zip"
+		"Filename": "/home/hiar/SwissRe/R_Core/SISMO_eq20221211.zip"
 	}
 }
 ```
@@ -264,11 +267,11 @@ The systems produce different types of results, the results updated with the lat
 
 In the following links you can find the latest stable version of the system for downloading
 
-* R-Core (MX, COL - EQ & HYDRO) v2.0.0.1 (8 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_v2.0.0.1_linux-x64.zip) (updated 2023-03-28)
+* R-Core (MX, COL - EQ & HYDRO) v2.0.0.2 (8 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_v2.0.0.2_linux-x64.zip) (updated 2023-08-28)
 
 * R-Core File System v2.0.0.1 (821 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_fs_v2.0.0.1.zip) (updated 2023-03-28)
 
-* R-Core (ASLAC - EQ) v2.0.0.1 (8 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_v2.0.0.1_ASLAC_linux-x64.zip) (updated 2023-05-23)
+* R-Core (ASLAC - EQ) v2.0.0.2 (8 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_v2.0.0.2_ASLAC_linux-x64.zip) (updated 2023-08-28)
   
 * R-Core ASLAC File System v2.0.0.1 (745 MB) [download](https://serv.ern.com.mx/download/SwissRe_PATM/R_Core_fs_v2.0.0.1_ASLAC.zip) (updated 2023-05-23)
 
